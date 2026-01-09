@@ -24,6 +24,10 @@ export const metadata: Metadata = {
     url: "https://",
     images: [{ url: "" }],
   },
+  //favicon
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

@@ -1,14 +1,14 @@
 "use client";
 
 import { Review } from "../../types/review";
-import css from "./ReviewsTruck.module.css";
+import css from "./TruckReviews.module.css";
 import StarsRating from "../Rating/Rating";
 
-interface ReviewsTruckProps {
+interface TrucReviewskProps {
   reviews: Review[];
 }
 
-export default function ReviewsTruck({ reviews }: ReviewsTruckProps) {
+export default function TruckReviews({ reviews }: TrucReviewskProps) {
   return (
     <ul className={css.reviewsList}>
       {reviews.length > 0 &&

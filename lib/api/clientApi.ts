@@ -1,6 +1,6 @@
 import { FormDataFilter, Truck } from "../../types/truck";
 import { nextServer } from "./api";
-import { ApiError } from "../../app/api/api";
+import { ApiError } from "../../app/api/campers/api";
 
 export interface GetTrucksParams {
   page: number;
@@ -34,4 +34,9 @@ export async function getTrucks({
     }
     throw err;
   }
+}
+export async function getTruckById(id: string) {
+  const res = await nextServer.get<Truck>(`/campers/${id}`);
+
+  return res.data;
 }

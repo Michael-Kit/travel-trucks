@@ -29,17 +29,13 @@ export default function Header() {
 
         <nav className={css.navigationBox}>
           <Link
-            className={`${css.navigationLink} ${
-              pathname === "/" ? css.accent : ""
-            }`}
+            className={`${css.navigationLink} ${pathname === "/" ? css.accent : ""}`}
             href="/"
           >
             Home
           </Link>
           <Link
-            className={`${css.navigationLink} ${
-              pathname === "/catalog" ? css.accent : ""
-            }`}
+            className={`${css.navigationLink} ${pathname === "/catalog" ? css.accent : ""}`}
             href="/catalog"
           >
             Catalog

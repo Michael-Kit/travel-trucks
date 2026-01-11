@@ -1,3 +1,5 @@
+/* app/Home.module.css  */
+
 .hero {
   padding: 130px 0;
   background-image: url("/images/hero.webp");
@@ -90,4 +92,26 @@
 .buttonError {
   display: block;
   margin: 0 auto;
+  border-radius: 200px;
+  border: none;
+  outline: none;
+  padding: 16px 49px;
+  background-color: var(--button);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: var(--color-white);
+
+  transition: color 250ms ease;
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-hover);
+  }
+
+  &:active {
+    background-color: var(--button);
+  }
 }

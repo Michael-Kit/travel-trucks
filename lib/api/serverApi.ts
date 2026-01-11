@@ -1,3 +1,5 @@
+// lib/api/serverApi.ts
+
 import { cookies } from "next/headers";
 import { nextServer } from "./api";
 import { GetTrucksParams, ResponseTrucks } from "./clientApi";

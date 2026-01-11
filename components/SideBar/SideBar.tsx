@@ -57,21 +57,21 @@ export default function SideBar({ saveFilter, onClosed }: SideBarProps) {
     <form onSubmit={handleSubmit} className={css.sidebar}>
       <label htmlFor="location" className={css.cityLabel}>
         Location
-        <div className={css.inputBox}>
-          <input
-            className={css.cityInput}
-            type="text"
-            id="location"
-            name="location"
-            placeholder="City"
-            onChange={handleChange}
-            value={truckFilter.location ?? ""}
-          />
-          <svg className={css.inputIcon} width={20} height={20}>
-            <use href="/sprite.svg#icon-map"></use>
-          </svg>
-        </div>
       </label>
+      <div className={css.inputCityBox}>
+        <input
+          className={css.cityInput}
+          type="text"
+          id="location"
+          name="location"
+          placeholder="City"
+          onChange={handleChange}
+          value={truckFilter.location ?? ""}
+        />
+        <svg className={css.inputIcon} width={20} height={20}>
+          <use href="/sprite.svg#icon-map"></use>
+        </svg>
+      </div>
 
       <p className={css.filterTitle}>Filters</p>
 

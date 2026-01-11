@@ -1,3 +1,5 @@
+// app/catalog/Catalog.client.tsx
+
 "use client";
 
 import { useInfiniteQuery } from "@tanstack/react-query";

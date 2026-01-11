@@ -1,3 +1,5 @@
+// components/TrucksItem/TrucksItem.tsx
+
 "use client";
 
 import Image from "next/image";
@@ -42,9 +44,7 @@ export default function TrucksItem({ truck }: TrucksItemProps) {
               onClick={handleClickLike}
             >
               <svg
-                className={`${css.likeIcon}  ${
-                  trucksIds.includes(truck.id) ? css.accent : ""
-                }`}
+                className={`${css.likeIcon}  ${trucksIds.includes(truck.id) ? css.accent : ""}`}
                 width={26}
                 height={24}
               >

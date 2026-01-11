@@ -1,3 +1,4 @@
+// app/layout.tsx
 import "modern-normalize";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
@@ -16,13 +17,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  metadataBase: new URL("https://travel-trucks-opal-omega.vercel.app"),
+  title: "TravelTrucks",
+  description:
+    "Rent modern campervans and trucks for your next adventure. TravelTrucks offers flexible booking, affordable prices, and reliable vehicles.",
   openGraph: {
-    title: "",
-    description: "",
-    url: "https://",
-    images: [{ url: "" }],
+    title: "TravelTrucks – Campervan & Truck Rental",
+    description:
+      "Book your campervan or truck easily with TravelTrucks. Explore new destinations with comfort and reliability.",
+    url: "https://travel-trucks-opal-omega.vercel.app",
+    images: [
+      {
+        url: "/images/hero.webp",
+      },
+    ],
   },
   //favicon
   icons: {

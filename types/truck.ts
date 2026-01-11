@@ -1,3 +1,5 @@
+// types/truck.ts
+
 import { Gallery } from "./gallery";
 import { Review } from "./review";
 

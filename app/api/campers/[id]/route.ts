@@ -1,40 +1,24 @@
-import { NextRequest, NextResponse } from "next/server";
-import { cookies } from "next/headers";
 import { isAxiosError } from "axios";
-import { api } from "../api";
+import { cookies } from "next/headers";
+import { NextResponse } from "next/server";
 import { logErrorResponse } from "../../_utils/utils";
+import { api } from "../../api";
 
-export async function GET(request: NextRequest) {
+type Props = {
+  params: Promise<{ id: string }>;
+};
+
+export async function GET(request: Request, { params }: Props) {
   try {
     const cookieStore = await cookies();
+    const { id } = await params;
 
-    const page = Number(request.nextUrl.searchParams.get("page") ?? 1);
-    const limit = Number(request.nextUrl.searchParams.get("limit") ?? 4);
-
-    const params: Record<string, string | number> = {
-      page,
-      limit,
-      location: request.nextUrl.searchParams.get("location") ?? "",
-      AC: request.nextUrl.searchParams.get("AC") ?? "",
-      transmission: request.nextUrl.searchParams.get("transmission") ?? "",
-      kitchen: request.nextUrl.searchParams.get("kitchen") ?? "",
-      TV: request.nextUrl.searchParams.get("TV") ?? "",
-      bathroom: request.nextUrl.searchParams.get("bathroom") ?? "",
-      form: request.nextUrl.searchParams.get("form") ?? "",
-    };
-
-    Object.keys(params).forEach((key) => {
-      if (params[key] === "") {
-        delete params[key];
-      }
-    });
-
-    const res = await api.get("/campers", {
-      params,
+    const res = await api.get(`/campers/${id}`, {
       headers: {
         Cookie: cookieStore.toString(),
       },
     });
+
     return NextResponse.json(res.data, { status: res.status });
   } catch (error) {
     if (isAxiosError(error)) {

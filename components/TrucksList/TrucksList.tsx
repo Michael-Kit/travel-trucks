@@ -1,3 +1,5 @@
+// components/TrucksList/TruckList.tsx
+
 "use client";
 
 import { Truck } from "../../types/truck";

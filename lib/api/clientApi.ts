@@ -1,6 +1,8 @@
+// lib/api/clientApi.ts
+
 import { FormDataFilter, Truck } from "../../types/truck";
 import { nextServer } from "./api";
-import { ApiError } from "../../app/api/campers/api";
+import { ApiError } from "../../app/api/api";
 
 export interface GetTrucksParams {
   page: number;

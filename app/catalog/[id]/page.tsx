@@ -7,6 +7,7 @@ import {
 } from "@tanstack/react-query";
 import TruckByIdClient from "./TruckById.client";
 
+
 interface Props {
   params: Promise<{
     id: string;

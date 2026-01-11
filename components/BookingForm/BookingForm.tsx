@@ -34,11 +34,11 @@ const BookingSchema = Yup.object().shape({
   comment: Yup.string().max(100),
 });
 
-interface BookingFormProps {
+interface FormBookingProps {
   truck: Truck;
 }
 
-export default function BookingForm({ truck }: BookingFormProps) {
+export default function FormBooking({ truck }: FormBookingProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [submitValue, setSubmitValue] = useState<SubmitValue | null>(null);
   const { draft, setDraft, clearDraft } = useBookingDraftStore();
@@ -143,7 +143,6 @@ export default function BookingForm({ truck }: BookingFormProps) {
               <div className={css.inputBox}>
                 <Field
                   as="textarea"
-                  type="text"
                   name="comment"
                   placeholder="Comment"
                   className={css.textarea}

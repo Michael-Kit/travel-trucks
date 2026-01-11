@@ -1,3 +1,5 @@
+// lib/store/bookingStore.ts
+
 import { FormData } from "../../components/BookingForm/BookingForm";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";

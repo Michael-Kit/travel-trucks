@@ -4,11 +4,11 @@ import { Review } from "../../types/review";
 import css from "./TruckReviews.module.css";
 import StarsRating from "../Rating/Rating";
 
-interface ReviewsTruckProps {
+interface TruckReviewsProps {
   reviews: Review[];
 }
 
-export default function ReviewsTruck({ reviews }: ReviewsTruckProps) {
+export default function TruckReviews({ reviews }: TruckReviewsProps) {
   return (
     <ul className={css.reviewsList}>
       {reviews.length > 0 &&

@@ -37,6 +37,7 @@ export async function getTrucks({
     throw err;
   }
 }
+
 export async function getTruckById(id: string) {
   const res = await nextServer.get<Truck>(`/campers/${id}`);
 

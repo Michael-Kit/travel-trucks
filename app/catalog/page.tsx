@@ -1,10 +1,11 @@
+// app/catalog/page.tsx
 import { getTrucks } from "../../lib/api/serverApi";
 import {
   dehydrate,
   HydrationBoundary,
   QueryClient,
 } from "@tanstack/react-query";
-import CatalogClient from "../catalog/Catalog.client";
+import CatalogClient from "./Catalog.client";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     title: "TravelTrucks – Vehicle Catalog",
     description:
       "Discover our catalog of campervans and trucks for rent. Choose the right vehicle for your adventure.",
-    url: "https://travel-trucks-opal-omega.vercel.app/catalog",
+    url: "https://travel-trucks-two-nu.vercel.app/catalog",
     images: [
       {
         url: "/images/hero.webp",

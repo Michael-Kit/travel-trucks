@@ -1,3 +1,5 @@
+// app/catalog/[id]/TruckById.client.tsx
+
 "use client";
 
 import css from "./TruckById.module.css";

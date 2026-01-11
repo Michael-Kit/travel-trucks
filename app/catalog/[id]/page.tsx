@@ -1,3 +1,4 @@
+// app/catalog/[id]/page.tsx
 import { getTruckById } from "../../../lib/api/serverApi";
 import { Metadata } from "next";
 import {
@@ -6,7 +7,6 @@ import {
   QueryClient,
 } from "@tanstack/react-query";
 import TruckByIdClient from "./TruckById.client";
-
 
 interface Props {
   params: Promise<{
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: truck.name,
       description: truck.description,
-      url: `https://travel-trucks-opal-omega.vercel.app/catalog/${id}`,
+      url: `https://travel-trucks-two-nu.vercel.app/catalog/${id}`,
       images: [
         {
           url: truck.gallery[0].thumb,

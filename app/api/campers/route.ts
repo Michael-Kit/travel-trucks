@@ -1,3 +1,5 @@
+// app/api/campers/route.
+
 import { NextRequest, NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { isAxiosError } from "axios";
